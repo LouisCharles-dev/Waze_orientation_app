@@ -1,0 +1,22 @@
+<html lang="en">
+
+<head>
+        <title> Hetic projet groupe 4 </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/table.css') }}">
+        <script type="text/javascript" src="{{url_for('static', filename='js/script.js')}}"></script>
+</head>
+
+<body>
+        <div class="formation">    
+                <h1>Voici les formations pour vous</h1>
+                {% for formation in rome_text %}
+                        <article>
+                                <h2>{{ formation }}</h2>
+                                <a href="/search_formation?formation={{rome_text[formation]}}">voir plus</a> 
+                        </article>
+                {% endfor %}      
+        </div>
+
+</body>
+
+</html>
